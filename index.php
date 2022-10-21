@@ -1,42 +1,5 @@
 <?php
-   /**
-    * Gerenciador Clínico Odontológico
-    * Copyright (C) 2006 - 2009
-    * Autores: Ivis Silva Andrade - Engenharia e Design(ivis@expandweb.com)
-    *          Pedro Henrique Braga Moreira - Engenharia e Programação(ikkinet@gmail.com)
-    *
-    * Este arquivo é parte do programa Gerenciador Clínico Odontológico
-    *
-    * Gerenciador Clínico Odontológico é um software livre; você pode
-    * redistribuí-lo e/ou modificá-lo dentro dos termos da Licença
-    * Pública Geral GNU como publicada pela Fundação do Software Livre
-    * (FSF); na versão 2 da Licença invariavelmente.
-    *
-    * Este programa é distribuído na esperança que possa ser útil,
-    * mas SEM NENHUMA GARANTIA; sem uma garantia implícita de ADEQUAÇÂO
-    * a qualquer MERCADO ou APLICAÇÃO EM PARTICULAR. Veja a
-    * Licença Pública Geral GNU para maiores detalhes.
-    *
-    * Você recebeu uma cópia da Licença Pública Geral GNU,
-    * que está localizada na raíz do programa no arquivo COPYING ou COPYING.TXT
-    * junto com este programa. Se não, visite o endereço para maiores informações:
-    * http://www.gnu.org/licenses/old-licenses/gpl-2.0.html (Inglês)
-    * http://www.magnux.org/doc/GPL-pt_BR.txt (Português - Brasil)
-    *
-    * Em caso de dúvidas quanto ao software ou quanto à licença, visite o
-    * endereço eletrônico ou envie-nos um e-mail:
-    *
-    * http://www.smileodonto.com.br/gco
-    * smile@smileodonto.com.br
-    *
-    * Ou envie sua carta para o endereço:
-    *
-    * Smile Odontolóogia
-    * Rua Laudemira Maria de Jesus, 51 - Lourdes
-    * Arcos - MG - CEP 35588-000
-    *
-    *
-    */
+   
 	include "lib/config.inc.php";
     if(!$install) {
         header('Location: ./configurador.php');
@@ -52,7 +15,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-<title>Gerenciador Clínico Odontológico Smile Odonto - Administração Odontológica Em Suas Mãos</title>
+<title>Gerenciador Clinica Odonto</title>
 <link rel="SHORTCUT ICON" href="favicon.ico">
 <link href="css/smile.css" rel="stylesheet" type="text/css" />
 <script language="javascript" type="text/javascript" src="lib/script.js.php"></script>
@@ -66,7 +29,7 @@
 </div>
 <div class="conteudo" id="conteudo"></div>
   <div class="rodape" id="rodape"> <br />
-      <?php echo $LANG['general']['smile_odontology']?> - <?php echo $LANG['general']['enhancing_your_smile']?> - <a href="http://www.smileodonto.com.br" target="_blank">www.smileodonto.com.br </a><br>
+      <?php echo $LANG['general']['smile_odontology']?> - <?php echo $LANG['general']['enhancing_your_smile']?> - <a href="http://www.linket.com.br" target="_blank">Linket SoluÃ§Ãµes Web </a><br>
       <br>
       <?php echo $LANG['general']['be_part_of_smile']?>
   </div>
