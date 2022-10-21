@@ -13,9 +13,9 @@
 
     // Vari�veis do conex�o com o BD
     $server = 'localhost';
-    $user = 'root';
-    $pass = 'nosferatu';
-    $bd = 'gerenciador';
+    $user = 'u832326909_nona';
+    $pass = 'Ipx159700!';
+    $bd = 'u832326909_dentista';
   
     // Quantidade de p�ginas exibidas nas pagina��es
     define('PG_MAX', 15);
