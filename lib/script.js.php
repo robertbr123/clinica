@@ -1,42 +1,5 @@
 <?php
-   /**
-    * Gerenciador Clínico Odontológico
-    * Copyright (C) 2006 - 2009
-    * Autores: Ivis Silva Andrade - Engenharia e Design(ivis@expandweb.com)
-    *          Pedro Henrique Braga Moreira - Engenharia e Programação(ikkinet@gmail.com)
-    *
-    * Este arquivo é parte do programa Gerenciador Clínico Odontológico
-    *
-    * Gerenciador Clínico Odontológico é um software livre; você pode
-    * redistribuí-lo e/ou modificá-lo dentro dos termos da Licença
-    * Pública Geral GNU como publicada pela Fundação do Software Livre
-    * (FSF); na versão 2 da Licença invariavelmente.
-    *
-    * Este programa é distribuído na esperança que possa ser útil,
-    * mas SEM NENHUMA GARANTIA; sem uma garantia implícita de ADEQUAÇÂO
-    * a qualquer MERCADO ou APLICAÇÃO EM PARTICULAR. Veja a
-    * Licença Pública Geral GNU para maiores detalhes.
-    *
-    * Você recebeu uma cópia da Licença Pública Geral GNU,
-    * que está localizada na raíz do programa no arquivo COPYING ou COPYING.TXT
-    * junto com este programa. Se não, visite o endereço para maiores informações:
-    * http://www.gnu.org/licenses/old-licenses/gpl-2.0.html (Inglês)
-    * http://www.magnux.org/doc/GPL-pt_BR.txt (Português - Brasil)
-    *
-    * Em caso de dúvidas quanto ao software ou quanto à licença, visite o
-    * endereço eletrônico ou envie-nos um e-mail:
-    *
-    * http://www.smileodonto.com.br/gco
-    * smile@smileodonto.com.br
-    *
-    * Ou envie sua carta para o endereço:
-    *
-    * Smile Odontolóogia
-    * Rua Laudemira Maria de Jesus, 51 - Lourdes
-    * Arcos - MG - CEP 35588-000
-    *
-    *
-    */
+   
 	include_once "../lib/config.inc.php";
 	include_once "../lib/func.inc.php";
 	include_once "../lib/classes.inc.php";
@@ -52,7 +15,7 @@ if (navigator.appName.indexOf('Microsoft') != -1) {
 
 function extraiScript(texto) {
 	/**
- 	 * Função original de SkyWalker.TO do imasters/forum
+ 	 * Funï¿½ï¿½o original de SkyWalker.TO do imasters/forum
  	 * Alterada por Micox - micoxjcg@yahoo.com.br
  	 * Alterada por Pita
  	 * Ref.: http://forum.imasters.com.br/index.php?showtopic=165277
@@ -108,7 +71,7 @@ function ajaxInit() {
 			try {
 				requi = new XMLHttpRequest();
 			} catch(exc) {
-			alert("Esse browser não tem recursos para uso do Ajax");
+			alert("Esse browser nï¿½o tem recursos para uso do Ajax");
 			requi = null;
 			}
 		}
@@ -214,7 +177,7 @@ function confirmLink(theLink) {
 
 function Bloqueia_Caracteres(evnt){
 	/**
- 	 * Função original de Diego Pires Plentz
+ 	 * Funï¿½ï¿½o original de Diego Pires Plentz
  	 *
  	 */
 	if (clientNavigator == "IE") {
@@ -230,7 +193,7 @@ function Bloqueia_Caracteres(evnt){
 
 function Ajusta_Data(input, evnt){
 	/**
- 	 * Função original de Diego Pires Plentz
+ 	 * Funï¿½ï¿½o original de Diego Pires Plentz
  	 *
  	 */	
 	if (input.value.length == 2 || input.value.length == 5) {
@@ -247,7 +210,7 @@ function Ajusta_Data(input, evnt){
 
 function Ajusta_MesAno(input, evnt){
 	/**
- 	 * Adaptação da função original de Diego Pires Plentz
+ 	 * Adaptaï¿½ï¿½o da funï¿½ï¿½o original de Diego Pires Plentz
  	 * extends Ajusta_Data()
  	 *
  	 */	
@@ -341,7 +304,7 @@ function Ajusta_Valor(input, evnt){
 
 function Ajusta_CEP(input, evnt){
 	/**
- 	 * Função original de Pedro Henrique Braga Moreira
+ 	 * Funï¿½ï¿½o original de Pedro Henrique Braga Moreira
  	 *
  	 */
 	if (input.value.length == 5) {
@@ -358,7 +321,7 @@ function Ajusta_CEP(input, evnt){
 
 function Ajusta_CPF(input, evnt){
 	/**
- 	 * Função original de Pedro Henrique Braga Moreira
+ 	 * Funï¿½ï¿½o original de Pedro Henrique Braga Moreira
  	 *
  	 */
 	if (input.value.length == 3 || input.value.length == 7) {
@@ -384,7 +347,7 @@ function Ajusta_CPF(input, evnt){
 
 function Ajusta_CNPJ(input, evnt){
 	/**
- 	 * Função original de Pedro Henrique Braga Moreira
+ 	 * Funï¿½ï¿½o original de Pedro Henrique Braga Moreira
  	 *
  	 */
 	if (input.value.length == 2 || input.value.length == 6) {
@@ -427,7 +390,7 @@ function Ajusta_CPFCNPJ(input, evnt, valor) {
 
 function NewWindow(myPage, myName, Width, Height, Scroll, Resizable) {
 	/**
- 	 * Função original de sOul
+ 	 * Funï¿½ï¿½o original de sOul
  	 *
  	 */	
 	var winTop = ((screen.height - Height) / 2);
