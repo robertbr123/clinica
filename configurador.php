@@ -1,43 +1,5 @@
 <?php
-    /**
-     * Gerenciador Clínico Odontológico
-     * Copyright (C) 2006 - 2009
-     * Autores: Ivis Silva Andrade - Engenharia e Design(ivis@expandweb.com)
-     *          Pedro Henrique Braga Moreira - Engenharia e Programação(ikkinet@gmail.com)
-     *
-     * Este arquivo é parte do programa Gerenciador Clínico Odontológico
-     *
-     * Gerenciador Clínico Odontológico é um software livre; você pode
-     * redistribuí-lo e/ou modificá-lo dentro dos termos da Licença
-     * Pública Geral GNU como publicada pela Fundação do Software Livre
-     * (FSF); na versão 2 da Licença invariavelmente.
-     *
-     * Este programa é distribuído na esperança que possa ser útil,
-     * mas SEM NENHUMA GARANTIA; sem uma garantia implícita de ADEQUAÇÂO
-     * a qualquer MERCADO ou APLICAÇÃO EM PARTICULAR. Veja a
-     * Licença Pública Geral GNU para maiores detalhes.
-     *
-     * Você recebeu uma cópia da Licença Pública Geral GNU,
-     * que está localizada na raíz do programa no arquivo COPYING ou COPYING.TXT
-     * junto com este programa. Se não, visite o endereço para maiores informações:
-     * http://www.gnu.org/licenses/old-licenses/gpl-2.0.html (Inglês)
-     * http://www.magnux.org/doc/GPL-pt_BR.txt (Português - Brasil)
-     *
-     * Em caso de dúvidas quanto ao software ou quanto à licença, visite o
-     * endereço eletrônico ou envie-nos um e-mail:
-     *
-     * http://www.smileodonto.com.br/gco
-     * smile@smileodonto.com.br
-     *
-     * Ou envie sua carta para o endereço:
-     *
-     * Smile Odontolóogia
-     * Rua Laudemira Maria de Jesus, 51 - Lourdes
-     * Arcos - MG - CEP 35588-000
-     *
-     *
-     */
-
+    
     header("Content-type: text/html; charset=ISO-8859-1", true);
 
     if(!isset($_GET['idioma'])) {
@@ -78,7 +40,7 @@
                 $myerro++;
                 $r[3] = ' color="#FF0000"';
                 $msg[] = $LANG['config']['err_database_server_not_found'];
-                //Servidor não encontrado
+                //Servidor nï¿½o encontrado
             }
             if($_POST['versao'] == 'novo') {
                 if(!empty($_POST['senha']) && !empty($_POST['fantasia']) && $_POST['senha'] == $_POST['resenha'] && strlen($_POST['senha']) >= 6 && $myerro === 0) {
@@ -89,18 +51,18 @@
                     $config[54] = "    \$bd = '".$_POST['bd']."';\n";
                     $config[64] = "    \$install = true;\n";
                     file_put_contents($caminho, $config);
-                    mysql_query("CREATE DATABASE IF NOT EXISTS ".$_POST['bd']) or die('Criação da base: '.mysql_error());
-                    mysql_select_db($_POST['bd'], $conn) or die('Seleção da base: '.mysql_error());
+                    mysql_query("CREATE DATABASE IF NOT EXISTS ".$_POST['bd']) or die('Criaï¿½ï¿½o da base: '.mysql_error());
+                    mysql_select_db($_POST['bd'], $conn) or die('Seleï¿½ï¿½o da base: '.mysql_error());
                     $sqls = extraiSQL('bases/bd_novo.sql');
                     foreach($sqls as $sql) {
-                        mysql_query($sql) or die('Importação nova: '.mysql_error());
+                        mysql_query($sql) or die('Importaï¿½ï¿½o nova: '.mysql_error());
                     }
                     $sql = "UPDATE funcionarios SET senha = MD5('".$_POST['senha']."') WHERE cpf = '11111111111'";
-                    mysql_query($sql) or die('Alteração de senha: '.mysql_error());
+                    mysql_query($sql) or die('Alteraï¿½ï¿½o de senha: '.mysql_error());
                     $sql  = "UPDATE dados_clinica SET cnpj = '".$_POST['cnpj']."', razaosocial = '".$_POST['razaosocial']."', fantasia = '".$_POST['fantasia']."', proprietario = '".$_POST['proprietario']."', endereco = '".$_POST['endereco']."', ";
                     $sql .= "bairro = '".$_POST['bairro']."', cidade = '".$_POST['cidade']."', estado = '".$_POST['estado']."', cep = '".$_POST['cep']."', fundacao = '".$_POST['fundacao']."', telefone1 = '".$_POST['telefone1']."', telefone2 = '".$_POST['telefone2']."', ";
                     $sql .= "fax = '".$_POST['fax']."', email = '".$_POST['email']."', web = '".$_POST['web']."', idioma = '".$_GET['idioma']."'";
-                    mysql_query($sql) or die('Alteração de dados da clínica: '.mysql_error());
+                    mysql_query($sql) or die('Alteraï¿½ï¿½o de dados da clï¿½nica: '.mysql_error());
                     header('Location: ./');
                 } else {
                     if(empty($_POST['senha']) || $_POST['senha'] != $_POST['resenha'] || strlen($_POST['senha']) < 6) {
@@ -114,10 +76,10 @@
                 }
             } else {
                 if($myerro === 0) {
-                    mysql_select_db($_POST['bd'], $conn) or die('Seleção da base: '.mysql_error());
+                    mysql_select_db($_POST['bd'], $conn) or die('Seleï¿½ï¿½o da base: '.mysql_error());
                     $sqls = extraiSQL('bases/bd_atu_'.$_POST['versao'].'.sql');
                     foreach($sqls as $sql) {
-                        mysql_query($sql) or die('Importação Atualização: '.mysql_error().' - '.$sql);
+                        mysql_query($sql) or die('Importaï¿½ï¿½o Atualizaï¿½ï¿½o: '.mysql_error().' - '.$sql);
                     }
                     $config = file($caminho);
                     $config[51] = "    \$server = '".$_POST['server']."';\n";
